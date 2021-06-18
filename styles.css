@@ -1,0 +1,135 @@
+:root{
+    --title__color: white;
+    --text__color: #F5FDFF;
+    --light__color: #007ad0;
+    --dark__color: #012241;
+    --medium__color: #002A4D; 
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+}
+
+body{
+    background-color: var(--dark__color);
+}
+.header{
+    width: 70%;
+    height: 120px;
+    margin: 0 auto;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light__color);
+    margin-bottom: -55vw;
+}
+.header .header__title{
+    color: var(--title__color);
+    font-size: 20px;
+    font-weight: 600;
+}
+.values{
+    width: 90%;
+    min-height: 70vw;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    perspective: 500px;
+}
+.value{
+    background-color: var(--medium__color);
+    width: 30%;
+    min-height: 100%;
+    margin-left: 5px;
+    text-align: center;
+    border-top: 15px solid var(--light__color);
+    border-bottom: 2px solid var(--light__color);
+    transform-style: preserve-3d;
+    transform: translateY(58vw);
+}
+.value__title{
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 0px;
+    color: var(--title__color);
+    font-weight: 600;
+    font-size: 20px;
+    border-bottom:  1px solid #ccc;
+}
+.value__subtitle{
+    width: 70%;
+    margin: 0 auto;
+    padding: 15px 0px;
+    color: var(--title__color);
+    font-weight: 600;
+    font-size: 18px;
+}
+.value__description{
+    width: 70%;
+    margin: 0 auto;
+    padding: 15px 0px;
+    line-height: 30px;
+    color: var(--text__color);
+    font-weight: lighter;
+    font-size: 18px;
+}
+.depth{
+    height: 150px;
+    width: 100%;
+    background-color: #00457C;
+    transform: translateY(-75px) translateZ(-75px) rotateX(102deg);
+}
+.front{
+    width: 100%;
+}
+.front, .depth{
+    position: absolute;
+}
+
+@media(max-width:1144px){
+    .values{
+        min-height: 75vw;
+    }
+}
+@media(max-width:1106px){
+    .values{
+        min-height: 80vw;
+        width: 100%;
+    }
+    .value{
+        width: 32%;
+    }
+    .value__description{
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+/*@media(max-width: 830px){
+    .header{
+        margin-bottom: 10px;
+    }
+    .values{
+        perspective: unset;
+        flex-wrap: wrap;
+    }
+    .value{
+        margin: 10px;
+        width: 340px;
+        transform-style: unset;
+        transform: unset;
+    }
+    .value__description{
+        font-size: 17px;
+    }
+    .depth{
+        display: none;
+    }
+    .front, .depth{
+        position: static;
+    }
+}
+*/
