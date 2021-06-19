@@ -1,3 +1,6 @@
+/*------------
+|  VARIABLES  |
+|-------------*/
 :root{
     --title__color: white;
     --text__color: #F5FDFF;
@@ -14,6 +17,7 @@
 
 body{
     background-color: var(--dark__color);
+    padding-bottom: 20px;
 }
 .header{
     width: 70%;
@@ -30,6 +34,9 @@ body{
     color: var(--title__color);
     font-size: 20px;
     font-weight: 600;
+}
+.main-container{
+    margin-bottom: 65vw;
 }
 .values{
     width: 90%;
@@ -77,6 +84,9 @@ body{
     font-weight: lighter;
     font-size: 18px;
 }
+.front, .depth{
+    position: absolute;
+}
 .depth{
     height: 150px;
     width: 100%;
@@ -86,10 +96,9 @@ body{
 .front{
     width: 100%;
 }
-.front, .depth{
-    position: absolute;
-}
-
+/*------------
+| RESPONSIVE  |
+|-------------*/
 @media(max-width:1144px){
     .values{
         min-height: 75vw;
@@ -108,9 +117,12 @@ body{
         line-height: 24px;
     }
 }
-/*@media(max-width: 830px){
+@media(max-width: 830px){
     .header{
         margin-bottom: 10px;
+    }
+    .main-container{
+        margin-bottom: 50px;
     }
     .values{
         perspective: unset;
@@ -132,4 +144,3 @@ body{
         position: static;
     }
 }
-*/
